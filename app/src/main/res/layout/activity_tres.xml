@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ScrollView
+            android:layout_width="302dp"
+            android:layout_height="110dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.447"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.06">
+
+            <LinearLayout
+                android:id="@+id/msgList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/connect_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:onClick="onClick"
+            android:text="Conectar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.338"
+            app:layout_constraintStart_toEndOf="@+id/actualizar"
+            app:layout_constraintTop_toBottomOf="@+id/rotyb"
+            app:layout_constraintVertical_bias="0.092" />
+
+        <ImageButton
+            android:id="@+id/rotxa"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginRight="180dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/avance"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arribapeque" />
+
+        <ImageButton
+            android:id="@+id/abajo"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="600dp"
+            android:layout_marginLeft="600dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/abajo" />
+
+        <ImageButton
+            android:id="@+id/arriba"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="600dp"
+            android:layout_marginRight="600dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arriba" />
+
+        <EditText
+            android:id="@+id/avance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="188dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Avance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/actualizar"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:onClick="actualizar"
+            android:text="Actualizar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.499"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/avance" />
+
+        <ImageButton
+            android:id="@+id/delante"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="120dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toStartOf="@+id/avance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arriba" />
+
+        <ImageButton
+            android:id="@+id/atras"
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="90dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toStartOf="@+id/avance"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/delante"
+            app:srcCompat="@drawable/abajo" />
+
+        <ImageButton
+            android:id="@+id/derecha"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="180dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toStartOf="@+id/avance"
+            app:layout_constraintStart_toEndOf="@+id/delante"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/derecha" />
+
+        <ImageButton
+            android:id="@+id/izquierda"
+            android:layout_width="60dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="180dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toStartOf="@+id/delante"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/izquierda" />
+
+        <ImageButton
+            android:id="@+id/rotxb"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginRight="180dp"
+            android:onClick="onClick"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/avance"
+            app:layout_constraintTop_toBottomOf="@+id/rotxa"
+            app:srcCompat="@drawable/abajopeque" />
+
+        <ImageButton
+            android:id="@+id/rotya"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="130dp"
+            android:layout_marginRight="130dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rotxa"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arribapeque" />
+
+        <ImageButton
+            android:id="@+id/rotyb"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="130dp"
+            android:layout_marginRight="130dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rotxb"
+            app:layout_constraintTop_toBottomOf="@+id/rotya"
+            app:srcCompat="@drawable/abajopeque" />
+
+        <ImageButton
+            android:id="@+id/rotza"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rotya"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/arribapeque" />
+
+        <ImageButton
+            android:id="@+id/rotzb"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="65dp"
+            android:layout_marginRight="65dp"
+            android:onClick="onClick2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rotyb"
+            app:layout_constraintTop_toBottomOf="@+id/rotza"
+            app:srcCompat="@drawable/abajopeque" />
+
+        <TextView
+            android:id="@+id/datos3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.344"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actualizar"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TextView
+            android:id="@+id/datos4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.568"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actualizar"
+            app:layout_constraintVertical_bias="0.1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
